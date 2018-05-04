@@ -1,13 +1,15 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    Comment = require('./comment');
+	CommentSchema = require('./comment').schema;
 
 var TextPostSchema = new Schema({
 	title: String, 
 	content: String, 
 	thumbnail_image_url: String, 
 	votes: Number,
-	comments: [Comment.schema] 
+	comments: [CommentSchema],
+}, {
+  timestamps: true
 });
 
 var TextPost = mongoose.model('TextPost', TextPostSchema);
