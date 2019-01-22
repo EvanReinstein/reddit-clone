@@ -1,3 +1,8 @@
 .TextPost {
 	font-size: 0.8em;
 }
+
+img {
+	height: 48px;
+	width: 48px;
+}
